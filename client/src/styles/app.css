@@ -1,0 +1,85 @@
+:root {
+  color-scheme: light;
+  font-family: Inter, "Noto Sans CJK SC", "Source Han Sans SC", "Microsoft YaHei", sans-serif;
+  color: #172033;
+  background: #eef2f6;
+  font-synthesis: none;
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+button, input, select, textarea { font: inherit; }
+button { border: 1px solid #b8c2d1; background: #fff; padding: 7px 11px; border-radius: 7px; cursor: pointer; }
+button:hover:not(:disabled) { border-color: #3159a5; color: #1745a0; }
+button:disabled { opacity: .45; cursor: not-allowed; }
+button.danger { color: #b42318; }
+input, select, textarea { width: 100%; border: 1px solid #c8d0db; border-radius: 7px; padding: 8px; background: #fff; }
+textarea { resize: vertical; }
+label { display: block; font-size: 13px; font-weight: 650; margin: 10px 0; color: #344054; }
+label small { float: right; color: #98a2b3; font-weight: 500; }
+code { background: #f2f4f7; padding: 1px 5px; border-radius: 4px; }
+h1, h2, h3, p { margin-top: 0; }
+.app-shell { min-height: 100vh; }
+.topbar { display: flex; align-items: center; justify-content: space-between; padding: 16px 22px; background: #102a5c; color: white; }
+.topbar h1 { margin: 0 0 4px; font-size: 22px; }
+.topbar p { margin: 0; color: #c9d7f2; font-size: 13px; }
+.topbar select { width: 280px; }
+.split-view { display: grid; grid-template-columns: minmax(430px, 46%) 1fr; min-height: calc(100vh - 78px); }
+.panel { background: #fff; border: 1px solid #d9e0ea; margin: 12px; border-radius: 12px; padding: 14px; box-shadow: 0 2px 8px #1020400f; }
+.editor { overflow: auto; max-height: calc(100vh - 102px); }
+.toolbar { display: flex; gap: 8px; align-items: center; margin: 8px 0; }
+.toolbar.wrap { flex-wrap: wrap; }
+.link-button { border: 0; padding: 2px 4px; background: transparent; font-weight: 700; color: #173b78; text-align: left; }
+.clause-row { border-left: 3px solid #9db8e8; margin: 8px 0; padding: 7px 9px; background: #fbfcfe; border-radius: 6px; }
+.clause-row.selected { border-color: #c4320a; background: #fff7ed; }
+.clause-row.attachment { border-left-color: #b54708; }
+.clause-head { display: flex; align-items: center; gap: 8px; }
+.number-badge { background: #e7eefc; color: #1745a0; border-radius: 5px; padding: 1px 7px; font-size: 12px; }
+.stable-id, .muted { color: #8591a3; font-size: 11px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+.scope-badge { font-size: 11px; padding: 1px 6px; border-radius: 999px; }
+.scope-badge.landscape { background: #fffaeb; color: #b54708; }
+.body-draft { font-size: 12px; color: #5f6b7a; margin: 4px 0; white-space: pre-wrap; }
+.child-list { margin-left: 18px; border-left: 1px dashed #cbd5e1; padding-left: 8px; }
+.inspector { margin-top: 14px; padding-top: 12px; border-top: 1px solid #e4e7ec; }
+.grid-two { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.split-box { background: #f8fafc; border: 1px dashed #a8b5c7; padding: 10px; border-radius: 8px; margin-top: 12px; }
+.preview-pane { display: flex; flex-direction: column; overflow: hidden; max-height: calc(100vh - 102px); }
+.preview-toolbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.toolbar-actions { display: flex; gap: 8px; }
+.paper-stack { overflow: auto; padding: 10px; background: #dce2eb; }
+.paper { background: white; width: 210mm; min-height: 297mm; margin: 0 auto 16px; padding: 22mm 20mm; box-shadow: 0 4px 18px #0002; position: relative; }
+.paper.landscape { width: 297mm; min-height: 210mm; padding: 16mm 14mm; }
+.paper > header, .paper > footer { position: absolute; left: 20mm; right: 20mm; color: #667085; font-size: 9pt; border-bottom: 1px solid #e4e7ec; padding-bottom: 4px; }
+.paper.landscape > header, .paper.landscape > footer { left: 14mm; right: 14mm; }
+.paper > header { top: 10mm; }
+.paper > footer { bottom: 9mm; border-top: 1px solid #e4e7ec; border-bottom: 0; padding: 4px 0 0; text-align: center; }
+.paper h2 { text-align: center; margin: 18mm 0 10mm; }
+.preview-node { margin-bottom: 12px; break-inside: avoid; }
+.preview-node.attachment h3 { color: #9a3412; }
+.preview-node h3 { font-size: 16px; margin-bottom: 4px; }
+.ref-link { color: #175cd3; font-weight: 700; text-decoration: none; }
+table.contract-table { width: 100%; border-collapse: collapse; font-size: 9pt; }
+.contract-table th, .contract-table td { border: 1px solid #667085; padding: 4px; word-break: break-word; }
+.issue-list { margin: 6px 0; }
+.issue { padding: 6px 8px; border-radius: 6px; margin-bottom: 4px; font-size: 12px; }
+.issue.error { background: #fef3f2; color: #912018; border: 1px solid #fecdca; }
+.issue.warning { background: #fffaeb; color: #93370d; }
+.snapshot-frame { width: 100%; flex: 1; border: 1px solid #d0d5dd; border-radius: 8px; background: white; }
+.snapshot-drawer { max-height: 260px; overflow: auto; }
+.snapshot-drawer h2 { font-size: 16px; }
+.snapshot-card { border: 1px solid #e4e7ec; border-radius: 8px; padding: 8px; margin: 8px 0; }
+.snapshot-card.invalid { border-color: #f04438; background: #fffbfa; }
+.upgrade-panel { border: 1px solid #d0d5dd; border-radius: 8px; padding: 10px; margin-top: 8px; background: #fcfcfd; }
+.conflict { border-left: 3px solid #dc6803; background: #fffaeb; padding: 8px; margin: 8px 0; }
+.conflict label { display: inline-flex; margin: 4px 8px; gap: 4px; align-items: center; }
+.conflict input[type="radio"] { width: auto; }
+.report { max-height: 220px; overflow: auto; background: #101828; color: #d1e0ff; padding: 10px; border-radius: 8px; font-size: 11px; }
+.warning { color: #b54708; background: #fffaeb; border: 1px solid #fedf89; padding: 7px; border-radius: 6px; font-size: 12px; }
+.ok { color: #027a48; }
+.global-message { background: #ecfdf3; border: 1px solid #abefc6; padding: 8px; border-radius: 6px; }
+@media print {
+  body { background: white; }
+  .topbar, .editor, .snapshot-drawer, .preview-toolbar, .no-print { display: none !important; }
+  .split-view { display: block; }
+  .preview-pane, .paper-stack { overflow: visible; max-height: none; background: white; padding: 0; }
+  .paper, .paper.landscape { box-shadow: none; margin: 0; page-break-after: always; }
+}

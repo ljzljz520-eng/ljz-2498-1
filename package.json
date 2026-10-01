@@ -1,0 +1,28 @@
+{
+  "name": "contract-layout-studio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "合同条款排版器：稳定条款身份、模板基线+差异层、审阅快照与打印/PDF一致性",
+  "scripts": {
+    "dev": "concurrently \"npm:dev:server\" \"npm:dev:client\"",
+    "dev:server": "node --watch server/src/main.js",
+    "dev:client": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "start": "NODE_ENV=production node server/src/main.js",
+    "migrate": "node scripts/migrate.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "pg": "^8.13.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.9",
+    "concurrently": "^9.0.1",
+    "vite": "^7.3.6",
+    "vue": "^3.5.12"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
