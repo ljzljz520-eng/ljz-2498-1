@@ -1,0 +1,20 @@
+{
+  "name": "@ct/server",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "node src/index.js",
+    "start": "node src/index.js",
+    "test": "node --test test/"
+  },
+  "dependencies": {
+    "@ct/core": "*",
+    "@fastify/static": "^7.0.4",
+    "fastify": "^4.28.1",
+    "pg": "^8.12.0"
+  },
+  "optionalDependencies": {
+    "puppeteer-core": "^23.0.0"
+  }
+}

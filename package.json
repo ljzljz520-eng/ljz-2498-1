@@ -1,0 +1,11 @@
+{
+  "name": "contract-typesetter",
+  "private": true,
+  "workspaces": ["packages/core", "packages/server", "packages/web"],
+  "scripts": {
+    "test": "npm -w packages/core test && npm -w packages/server test",
+    "dev:server": "npm -w packages/server run dev",
+    "dev:web": "npm -w packages/web run dev",
+    "build:web": "npm -w packages/web run build"
+  }
+}
